@@ -1,12 +1,13 @@
-import { Cliente } from "./Cliente.js";
+
+import { Venda } from "./Venda.js";
 
 export class Vendas {
-  private produtosVendidos: Cliente[] = [];
+  private produtosVendidos: Venda[] = [];
 
-  adicionaVenda(cliente: Cliente) {
-    this.produtosVendidos.push(cliente);
+  adicionaVenda(venda:Venda) {
+    this.produtosVendidos.push(venda);
   }
-  lista(): readonly Cliente[] {
+  lista(): readonly Venda[] {
     return this.produtosVendidos;
   }
 }

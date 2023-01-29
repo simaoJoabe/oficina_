@@ -1,5 +1,6 @@
 import { DiasDaSemana } from "../enums/dias-da-semana.js";
 import { Cliente } from "../models/Cliente.js";
+import { Venda } from "../models/Venda.js";
 
 import { Vendas } from "../models/Vendas.js";
 import { MensagemView } from "../views/MensagemView.js";
@@ -29,7 +30,7 @@ export class ControllerCliente {
   }
 
   public adiciona(): void {
-    const venda = Cliente.criaDe(
+    const venda = Venda.criaDe(
       this.inputNome.value,
       this.inputData.value,
       this.inputQuantidade.value,

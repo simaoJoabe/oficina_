@@ -1,4 +1,5 @@
-import { Pagamento } from "./Pagamento";
+import { Pagamento } from "./Pagamento.js";
+import { Venda } from "./Venda.js";
 
 export class Cliente {
   constructor(
@@ -6,7 +7,7 @@ export class Cliente {
     private _dataCadastro: Date,
     private _quantidade: number,
     private _valor: number,
-    private _pagamento: string,
+    private _pagamento: Pagamento,
     private _telefone: number
   ) {}
 
@@ -45,6 +46,6 @@ export class Cliente {
     const telefone = parseInt(telefoneString);
     const pagamento = pagamentoString;
 
-    return new Cliente(nome, date, quantidade, valor, pagamento, telefone);
+    return new Venda(nome, date, quantidade, valor, pagamento, telefone);
   }
 }
